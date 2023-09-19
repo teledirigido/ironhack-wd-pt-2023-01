@@ -1,0 +1,26 @@
+article, div {
+  box-sizing:border-box;
+}
+
+/* <div class="welcome-box"> */
+.welcome-box {
+  background-color:green;
+}
+
+/* <article>  */
+article {
+  background-color: #DDD;
+  padding:1rem;
+  border-radius:25px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* <article id="article-76"> */
+#article-76 {
+  background-color: #CCC;
+}
+
+.action-button:hover {
+  text-decoration:underline;
+}
