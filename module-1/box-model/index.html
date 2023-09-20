@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      padding:100px 80px;
+      box-sizing: border-box;
+    }
+    .lorem-wrapper {
+      display:flex;
+      justify-content:flex-start;
+      flex-wrap:wrap;
+      background:green;
+    }
+    .lorem {
+      /* margin-bottom:20px; */
+      text-align: center;
+    }
+    .lorem-item {
+      width:33%;
+      font-size:20px;
+      background:cyan;
+    }
+    .lorem-item:nth-child(even) {
+      background-color:royalblue;
+    }
+    .hello {
+      background:blue;
+    }
+    .child {
+      background-color: #fff;
+    }
+    hr {
+      margin:100px 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="lorem-wrapper">
+    <div class="lorem lorem-item">
+      Lorem ipsum dolor
+    </div>
+    <div class="ipsum lorem-item">
+      sit amet consectetur adipisicing.
+    </div>
+    <div class="ipsum lorem-item">
+      sit amet consectetur adipisicing.
+    </div>
+    <div class="ipsum lorem-item">
+      sit amet consectetur adipisicing.
+    </div>
+    <div class="ipsum lorem-item">
+      sit amet consectetur adipisicing.
+    </div>
+    <div class="ipsum lorem-item">
+      sit amet consectetur adipisicing.
+    </div>
+  </section>
+
+  <hr>
+  <div class="hello">
+    Hello world
+  </div>
+  
+</body>
+</html>
