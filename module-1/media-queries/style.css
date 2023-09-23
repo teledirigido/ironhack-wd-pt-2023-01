@@ -1,0 +1,52 @@
+main {
+  max-width:960px;
+  margin:0 auto;
+}
+
+main h1 {
+  padding: 2rem 0;
+}
+
+article {
+  display:flex;
+  gap: 3rem;
+  padding:2rem;
+}
+
+article ul {
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+/* article img {
+  width:100%;
+} */
+
+/* valid only on screen sizes over 641px */
+@media all and (min-width:641px) {
+  
+  article figure,
+  article .description {
+    width:50%;
+  }
+
+}
+
+@media all and (min-width:641px) and (max-width:1024px) {
+  .bg-gray--on-tablet {
+    background-color: #DFDFDF;
+  }
+}
+
+/* valid only on screen sizes up to 640px */
+@media all and (max-width:640px) {
+
+  article {
+    flex-direction:column;
+  }
+
+  article img {
+    width:100%;
+  }
+
+}

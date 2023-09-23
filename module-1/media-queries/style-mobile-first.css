@@ -1,0 +1,24 @@
+article {
+  padding:2rem;
+}
+
+article figure {
+  padding-bottom:1rem;
+}
+
+article ul {
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+main {
+  max-width:960px;
+  margin:0 auto;
+}
+
+@media all and (min-width:641px) {
+  article {
+    display:flex;
+    gap:2rem;
+  }
+}

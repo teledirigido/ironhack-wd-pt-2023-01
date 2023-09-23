@@ -1,0 +1,121 @@
+/* CSS RESET - do not remove */
+/* Reset default browser styles and provide a consistent starting point */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+/*  Set the font */
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+/* STYLES */
+/* Write your CSS below */
+.full-img {
+  /* Get a full height div with a child element x and y centered */
+  display:flex;
+  
+  height:90vh;
+  min-height:400px;
+
+  align-items: center;
+  justify-content:center;
+  background-image: url('../images/apple-pie.jpg');
+}
+
+.full-img h1 {
+  color:#FFF;
+  font-size:4rem; /* 4 * 20px */
+  /* transition: <property> <duration> <timing-function> */
+  transition: font-size 1s ease, color 300ms ease, transform 300ms ease;
+  /* transition-timing-function: steps(2, jump-start); */
+}
+
+.full-img h1:hover {
+  color:bisque;
+  font-size:5rem;
+  transform:rotate(-10deg);
+}
+
+.box {
+  padding:3rem;
+  border-bottom:1px solid #666;
+  max-width:960px;
+  margin:0 auto;
+}
+
+.box:last-of-type {
+  border-bottom:0;
+}
+
+.box hr {
+  margin-top:2.5rem;
+}
+.box img {
+  margin:0 auto;
+  display:block;
+  max-width:400px;
+  margin-top: 2rem;
+}
+
+.box ul, 
+.box ol {
+  padding-top: 2rem;
+  padding-left:2rem;
+}
+
+.box ol li,
+.box ul li {
+  padding-left: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.box ul li::marker {
+  content:"-";
+}
+
+.box ol {
+  list-style:none;
+}
+
+.box ol li {
+  padding-bottom: 0.7rem;
+}
+
+.box ol li::before {
+  content: counter(list-item) ") ";
+  counter-increment: 1;
+}
+
+/* Animation CLASSES 
+.image-recipe {
+  animation: myAnimation 5s linear infinite alternate;
+}
+
+@keyframes myAnimation {
+  0% {
+    opacity:1;
+    transform: rotate(0);
+    width:100px;
+  }
+  50% {
+    width:200px;
+    transform: rotate(90deg);
+  }
+  100% {
+    opacity:0.2;
+    width:100px;
+    transform: rotate(0);
+  }
+}
+*/
