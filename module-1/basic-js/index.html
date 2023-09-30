@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let city = 'Barcelona';
+    let classDay = 'Monday';
+    let classLength;
+
+    // if ( condition )
+    if ( classDay.includes('Saturday') ) {
+      classLength = 6;
+    } else if( classDay.includes('Monday') || classDay.includes('Wednesday') ) {
+      classLength = 3;
+    } else {
+      classLength = 0;
+    }
+
+    // do something
+
+    if (classLength) {
+      console.log(`Today we are at Ironhack for ${classLength} hours`);
+    } else {
+      console.log('FREEE DAY');
+    }
+
+    console.log('-------------------------------');
+
+    classLength = 2;
+
+    switch(classLength) {
+      case 6:
+        console.log('Today is a long work day, probably the weekend');
+        // our code
+        // more code
+        break;
+      case 3:
+        console.log('Today is a short work day');
+        break;
+
+      case 0:
+      default:
+        console.log('Today we are not in class');
+        break;
+    }
+
+    console.log('---------------------------');
+
+    let distanceToCampus = 10;
+
+    while ( distanceToCampus >= 0 ) {
+
+      if (distanceToCampus === 0) {
+        console.log('I have arrived :)');
+      } else {
+        console.log(`I am walking and I have left ${distanceToCampus}kms`);
+      }
+
+      distanceToCampus--;
+    }
+
+    console.log('---------------------------');
+
+    let myAge = 60;
+    let retirementAge = 65;
+    
+    while( myAge < retirementAge ) {
+      console.log(`My age is ${myAge}. I am still working :(`);
+      myAge++;
+    }
+
+    console.log('Enjoy your retirement');
+
+    console.log('---------------------------');
+    
+    for (let i = 56 ; i < retirementAge ; i++ ) {
+      console.log(`For Loop: My age is ${i}`);
+    }
+    
+    console.log('---------------------------');
+    
+    let daysOfTheWeek = ['Monday','Tuesday','Wednesday','Thursday', 'Friday','Saturday','Sunday'];
+    
+    for(let i = 0; i < daysOfTheWeek.length ; i++ ) {
+      if ( daysOfTheWeek[i] === 'Monday' || daysOfTheWeek[i] === 'Wednesday' || daysOfTheWeek[i] === 'Saturday' ) {
+        // if (i === 0 || i === 2 || i === 5 ) {
+          console.log(daysOfTheWeek[i].toUpperCase());
+        } else {
+          console.log(daysOfTheWeek[i]);
+        }
+      }
+      
+    console.log('---------------------------');
+    
+    for( let i = daysOfTheWeek.length - 1 ; i >= 0 ; i-- ) {
+      console.log(daysOfTheWeek[i]);
+    }
+
+    console.log('---------------------------');
+
+    let reversedArray = daysOfTheWeek.reverse();
+    for (let i = 0 ; i < reversedArray.length ; i++ ) {
+      console.log(`Reversed: ${reversedArray[i]}`);
+    }
+
+    console.log('---------------------------');
+
+    const breakfastOptions = ['Coffee', 'Milkshake', 'Orange Juice'];
+
+    for (const option of breakfastOptions) {
+      console.log(`For of: ${option}`);
+    }
+
+
+
+  </script>
+</head>
+<body>
+</body>
+</html>
