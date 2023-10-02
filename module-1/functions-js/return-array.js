@@ -47,7 +47,7 @@ console.log(arrayNames);
 /**
  * In this case we can pass a function as an argument
  */
-const fruits = ['peras','manzanas','kiwis', 'albaricoque'];
+const fruits = ['peras','manzanas','kiwis', 'albaricoque'on];
 let longestElement = 0;
 let longestFruitName = '';
 fruits.forEach( function(item) {
