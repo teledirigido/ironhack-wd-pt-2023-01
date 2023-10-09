@@ -262,9 +262,10 @@ const placeWithPool = places.filter( item => {
 console.log(placeWithPool);
 
 const anotherList = [1, 60, 112, 123, 100, 99, 73, 45];
-const oddNumbers = anotherList.filter( item => {
-  return item % 2 === 1;
-});
+const checkEven = (item) => {
+  return item % 2 === 0;
+}
+const oddNumbers = anotherList.filter(checkEven);
 console.log(oddNumbers);
 
 
