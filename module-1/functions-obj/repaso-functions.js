@@ -17,7 +17,8 @@ let myResult = myFunction(2,3);
 
 
 const plantas = ['romero','lavanda','menta'];
-plantas.forEach(function(item){
+
+plantas.forEach(function(item) {
   console.log(item);
 });
 
