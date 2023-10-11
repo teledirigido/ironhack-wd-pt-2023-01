@@ -1,14 +1,35 @@
 const numbers = [22, 23, 99, 68, 1, 0, 9, 112, 223, 64, 18];
 const bets = [
-  { name: 'bet1', price: 100 },
-  { name: 'bet2', price: 50 },
-  { name: 'bet3', price: 150 }
+  { name: 'bet2', author: 'Michael', price: 50 },
+  { name: 'bet3', author: 'Brad', price: 50 },
+  { name: 'bet3', author: 'Andrew', price: 150 },
+  { name: 'bet1', author: 'Carlos', price: 75 },
 ];
 
-bets.sort( (a, b) => {
-  return a.price - b.price;
+// copy the array on a new array
+const copyBets = [...bets];
+
+copyBets.sort( (a, b) => {
+  //
+  if (a.price > b.price ) {
+    return 1;
+  //
+  } else if( a.price < b.price ) {
+    return -1;
+  //
+  } else {
+    if (a.author > b.author) {
+      return 1;
+    } else if (a.author < b.author) {
+      return -1
+    }
+  }
+  return 0;
 });
+
 console.log(bets);
+console.log(copyBets);
+
 
 numbers.sort( (a, b) => {
   return a - b;
