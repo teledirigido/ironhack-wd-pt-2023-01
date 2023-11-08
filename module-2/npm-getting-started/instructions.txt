@@ -1,0 +1,6 @@
+1. Create a folder
+2. Go to the folder and start npm
+  npm init --yes
+3. Install your first package, in this case "colors"
+  npm install colors
+
