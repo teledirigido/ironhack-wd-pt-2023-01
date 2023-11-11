@@ -1,5 +1,6 @@
 # students
 _students/
+node_modules/
 
 # General
 .DS_Store

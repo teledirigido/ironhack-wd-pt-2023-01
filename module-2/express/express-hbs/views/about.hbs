@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <style>
+    body {
+      --background-color: {{ bgColor }};
+    }
+    .presentation { background-color: var(--background-color); }
+    .description { background:#DDD; padding:1rem; border-radius:1rem; }
+    .item-1 { background:red; }
+    .color-red { background:red; }
+    .color-green { background:green; }
+  </style>
+</head>
+<body>
+  <p class="presentation">
+    <strong>{{ firstName }}</strong> {{lastName}}
+  </p>
+
+  {{#if descriptionHTML }}
+    <div class="description">
+      {{{ descriptionHTML }}}
+    </div>
+  {{else}}
+    No description provided
+  {{/if}}
+
+  {{#if over40}}
+    You are over 40th, don't worry, it will be fine.
+  {{/if}}
+
+  <ul>
+    {{#each favColors }}
+      <li class="item-{{@index}} color-{{this}}"> {{this}}</li>
+    {{/each}}
+  </ul>
+
+  <h3>Visited Countries</h3>
+
+  <ul>
+  {{#each visitedCountries}}
+    <li> {{@key}} {{@index}} {{ this.name }} | {{this.capital}}</li>
+  {{/each}}
+  </ul>
+
+  <ul>
+  {{#each tools}}
+    <li> {{@key}} {{@index}} - {{ this }}</li>
+  {{/each}}
+  </ul>
+
+  <h2>Using WITH</h2>
+  <ul>
+  {{#with tools}}
+    <li> {{anotherPropertie}}</li>
+  {{/with}}
+  </ul>
+
+  <h2>NOT Using WITH</h2>
+  <ul>
+    <li> {{tools.anotherPropertie}}</li>
+  </ul>
+
+</body>
+</html>

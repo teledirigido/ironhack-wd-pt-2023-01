@@ -1,0 +1,37 @@
+body {
+  background-color: cyan;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  animation: aniFonts infinite 1s;
+  font-size:3rem;
+}
+
+@keyframes aniFonts {
+  0% {
+    font-style:normal;
+    color:red;
+  }
+  100% {
+    font-style:italic;
+    color:blueviolet;
+  }
+}
+
+.body-dogs {
+  animation: dogsBG linear infinite 2000s;
+  background-position:center center;
+  background-size:contain;
+}
+
+@keyframes dogsBG {
+  0% {
+    /* background-position:0 0; */
+    background-size: 5%;
+  }
+  100% {
+    /* background-position:-1000% 0; */
+    background-size: 2000%;
+  }
+}
