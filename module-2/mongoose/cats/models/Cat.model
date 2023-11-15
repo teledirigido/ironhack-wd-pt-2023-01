@@ -1,0 +1,16 @@
+// models/Cat.js
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const catSchema = new Schema({
+  name: String,
+  color: {
+    type: String,
+    enum: ['white','brown','black']
+  },
+  age: Number
+});
+
+const Cat = mongoose.model('Cat', catSchema);
+
+module.exports = Cat;
