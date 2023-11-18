@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      box-sizing:border-box;
+    }
+    body { font-family:Sans-serif; font-size:16px;}
+    h1 { text-align: center;}
+    input { border:1px solid #CCC; padding:0.8rem; width:100%; border-radius: 100px;}
+    input:focus { background-color:#f1f1f1; outline:none; }
+    label { display: block; text-transform: uppercase; font-weight:bold; font-size:0.7rem; padding-left: 0.5rem; padding-bottom:0.2rem;}
+    p { margin:0; padding-bottom:1.5rem;}
+    form {
+      max-width: 550px; margin:0 auto; background:#DFDFDF; border-radius:10px; padding:2rem;
+      box-shadow:0 20px 10px -10px #DDD;
+    }
+    button[type="submit"] { width:100%; text-align: center; background:black; color:white; border-radius:100px; padding:0.5rem 0; border:0 none;}
+  </style>
+</head>
+<body>
+  <h1>Sign up</h1>
+  <form method="POST" action="/signup" >
+    <p>
+      <label for="firstName">Your Name</label>
+      <input type="text" class="text" name="firstName" id="firstName">
+    </p>
+    <p>
+      <label for="username">Username</label>
+      <input type="text" class="text" name="username" id="username">
+    </p>
+    <p>
+      <label for="password">Password</label>
+      <input type="password" class="text" name="password" id="password">
+    </p>
+    <p>
+      <button type="submit">Sign up</button>
+    </p>
+  </form>
+</body>
+</html>

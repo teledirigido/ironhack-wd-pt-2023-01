@@ -1,0 +1,35 @@
+<form action="/search" method="GET">
+  <p>
+    <label>
+    City
+    <input type="text" name="city">
+  </label>
+  </p>
+  
+  <p>
+    <label>
+  	Start-Date
+  	<input type="date" name="start-date">
+  </label>
+  </p>
+  
+  <p>
+    <label>
+      End-Date
+      <input type="date" name="end-date">
+    </label>
+  </p>
+
+  <p>
+    <label for="">
+      Favourite Foods:
+      <select name="favourite-foods" id="favourite-foods" multiple>
+        <option value="gnocci">Gnocci</option>
+        <option value="banitza">Banitza</option>
+        <option value="barquillos">Barquillos</option>
+      </select>
+    </label>
+  </p>
+  
+  <button type="submit">SEARCH</button>
+</form>
