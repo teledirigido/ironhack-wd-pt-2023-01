@@ -1,0 +1,11 @@
+<h2>Book list</h2>
+
+<ul>
+{{#each books}}
+  <li>
+    <a href="/books/{{this._id}}">
+      {{this.title}}
+    </a>
+  </li>
+{{/each}}
+</ul>

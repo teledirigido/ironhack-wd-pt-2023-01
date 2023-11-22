@@ -16,18 +16,29 @@ app.get('/news/:username/tags/:password', (req, res) => {
   res.send(req.params);
 });
 
-app.get('/search', (req, res) => {
+app.get('/find', (req, res) => {
   // valido: req.query.city, req.query['city']
   // req.query['favourite-foods'] no es lo mismo que req.query.favourite-foods
   // res.send({ 0: req.query['favourite-foods'], 1: req.query.city, 2: req.query['city'] })
 
   // res.send(req.query['start-date']);
   res.send(req.query)
+
+  City.create({
+    name: req.query.city
+  })
+
 })
 
 // http://localhost:3000
 app.get('/', (req, res) => {
-  res.render('index')
+  // res.render('index')
+  let myVar = {
+    name: 'juan',
+    lastname: 'pere'
+  };
+
+  res.render('index', myVar )
 });
 
 app.listen(3000, () => console.log('App listening on port http://localhost:3000!'));
