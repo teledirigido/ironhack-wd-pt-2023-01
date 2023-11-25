@@ -80,9 +80,12 @@ const books = [
 
 mongoose
   .connect(MONGO_URI)
+
   .then(x => {
     console.log(`Connected to Mongo database: "${x.connections[0].name}"`);
-
+  }).then( () => {
+    return Book.deleteMany();
+  }).then( () => {
     // Create new documents in the books collection
     return Book.create(books);
   })

@@ -1,0 +1,30 @@
+<h2>
+  Edit Book {{ title }}
+</h2>
+
+<form action="/books/edit" method="post">
+
+  <input type="hidden" name="id" value="{{ id }}">
+
+  <label> Title:
+    <input type="text" name="title" value="{{ title }}" />
+  </label>
+
+  <label> Author:
+    <input type="text" name="author" value="{{ author }}" />
+  </label>
+
+  <label> Description:
+    <textarea name="description" cols="30" rows="4">{{ description }}</textarea>
+  </label>
+
+  <label> Rate:
+    <input type="number" name="rating" min="1" max="10" value="{{ rating }}" />
+  </label>
+
+  <button type="submit"> Edit </button>
+</form>
+
+<hr>
+
+<a href="/books/{{id}}">Cancel</a>

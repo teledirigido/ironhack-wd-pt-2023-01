@@ -1,10 +1,16 @@
-<h2>Book detail: {{title}}</h2>
-<h3>{{author}}</h3>
+<h2>Book detail: {{ data.title}}</h2>
+<h3>{{data.author}}</h3>
+
+{{#if updated }}
+<p>Tu entrada ha sido actualizada</p>
+{{/if}}
 
 <p>
-  {{description}}
+  {{ data.description }}
 </p>
 
 <hr>
 
-<a href="/books">Back</a>
+<a href="/books">Back</a> | 
+  <a href="/books/{{data.id}}/edit">Edit</a> | 
+  <a href="/books/{{data.id}}/delete">Delete</a>
