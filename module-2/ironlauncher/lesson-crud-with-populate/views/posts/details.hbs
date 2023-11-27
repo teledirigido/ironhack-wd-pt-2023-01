@@ -1,0 +1,42 @@
+{{!-- posts/details.hbs --}}
+
+<h2>{{post.title}}</h2>
+<div>
+  {{post.content}}
+  <br><br>
+  - by {{post.author.username }} ♥️
+</div>
+
+{{#unless post.comments}}
+  <p>No comments yet!</p>
+{{/unless}}
+ 
+{{#each post.comments}}
+  <p><b>{{this.author.username}}:</b> {{this.content}}</p>
+{{/each}}
+
+<hr>
+ 
+<h3>Add comment</h3>
+ 
+<form action="/posts/{{post._id}}/comment" method="post">
+  <label> Your username: <br>
+    <select name="author" id="author">
+      {{#each users}}
+        <option value="{{ this.id }}">
+          {{this.username}}
+        </option>
+      {{/each}}
+    </select>
+  </label><br>
+  
+  Comment: <br>
+  {{!-- <input type="text" name="postAuthor" value="{{author.username}}" hidden /> --}}
+  <textarea name="content" cols="30" rows="2"></textarea>
+ <br>
+  <button type="submit">Comment</button>
+</form>
+
+
+<hr>
+<a href="/users/{{author._id}}/posts">See all {{author.username}}'s posts </a>

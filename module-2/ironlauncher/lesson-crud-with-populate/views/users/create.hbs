@@ -1,0 +1,16 @@
+<h2>Registration</h2>
+
+<form action="/user-create" method="POST">
+  <label> Username:
+    <input type="text" name="username" />
+  </label>
+  <br>
+
+  <button type="submit"> Register </button>
+</form>
+
+<div>
+  {{#if message}}
+    <p><b>{{message}}</b></p>
+  {{/if}}
+</div>

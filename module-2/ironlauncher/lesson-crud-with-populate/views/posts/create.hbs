@@ -1,0 +1,25 @@
+<h2>Create a new post</h2>
+
+<form action="/post-create" method="POST">
+  <label> Title:
+    <input type="text" name="title" />
+  </label>
+  <br>
+
+  <label> Content:
+    <textarea type="text" name="content"> </textarea>
+  </label>
+  <br>
+
+  <label for="author-select"> Created by:
+    <select name="author">
+      <option disable selected value=""></option>
+      {{#each dbUsers}}
+        <option value="{{this._id}}"> {{this.username}} </option>
+      {{/each}}
+    </select>
+  </label>
+  <br>
+
+  <button type="submit"> Create the post </button>
+</form>
