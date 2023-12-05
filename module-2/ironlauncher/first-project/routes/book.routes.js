@@ -27,7 +27,8 @@ router.get('/:id', (req, res) => {
 
   Book.findById(req.params.id).then( dataFromDB => {
         
-    res.render('books/book-details.hbs', { data: dataFromDB, updated: req.query.updated })
+    // res.render('books/book-details.hbs', { data: dataFromDB, updated: req.query.updated })
+    res.send(dataFromDB);
 
   });
 
@@ -39,9 +40,23 @@ router.get('/:id/edit', (req, res) => {
 
   Book.findById(id)
     .then( bookFromDB => {
-      res.render('books/book-edit', bookFromDB);
+      // res.render('books/book-edit', bookFromDB);
+      res.send('Book updated');
     })
 });
+
+router.post('/:id/edit', (req, res) => {
+  const { id } = req.params;
+  const { title, description, author, rating } = req.body;
+
+  
+  Book.findByIdAndUpdate(id, { title, description, author, rating }, { new: true })
+    .then( (dataFromDB) => {
+      res.send(dataFromDB);
+    });
+
+});
+
 
 router.post('/edit', (req, res) => {
   const { title, description, author, rating } = req.body;
