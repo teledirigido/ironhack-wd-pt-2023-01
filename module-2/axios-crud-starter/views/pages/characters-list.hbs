@@ -1,0 +1,24 @@
+<section class="container">
+    <h1>Characters list</h1>
+    <hr>
+
+    <div class="row">
+
+        {{#each characters}}
+            <div class="col-md-4">
+                <article class="character">
+                    <h2>{{name}} <small>(ID {{id}})</small></h2>
+                    <hr>
+                    <p>Occupation: {{occupation}}</p>
+                    <p>Weapon: {{weapon}}</p>
+                    <div class="btn-group" style="width: 100%">
+                        <a href="/movie-characters/edit/{{id}}" class="btn btn-outline-dark btn-sm">Edit character</a>
+                        <a href="/movie-characters/delete/{{id}}" class="btn btn-dark btn-sm">Delete character</a>
+                    </div>
+                </article>
+            </div>
+        {{/each}}
+
+    </div>
+
+</section>
