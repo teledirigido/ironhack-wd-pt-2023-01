@@ -2,6 +2,8 @@
 const router = require('express').Router();
 const Book = require('../models/Book.model.js');
 
+const myFunc = require('../middleware/sample.js');
+
 // GET route to retrieve and display all the books
 router.get('/', (req, res) => {
 
@@ -11,10 +13,11 @@ router.get('/', (req, res) => {
 
 });
 
-
-router.get('/create', (req, res ) => {
+router.get('/create', myFunc, (req, res ) => {
   res.render('books/book-create.hbs');
 });
+
+
 
 router.post('/create', (req, res) => {
   Book.create(req.body).then( (data) => {
