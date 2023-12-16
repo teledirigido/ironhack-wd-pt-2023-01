@@ -1,0 +1,33 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" /> {{!-- has to be added --}}
+  </head>
+
+  <body>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/movies">All Movies</a>
+        </li>
+        <li>
+          <a href="/movies/create">Create new Movie</a>
+        </li>
+      </ul>
+    </nav>
+
+    {{{body}}}
+
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>
