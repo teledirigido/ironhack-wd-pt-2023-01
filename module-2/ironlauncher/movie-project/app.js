@@ -20,8 +20,15 @@ require("./config")(app);
 
 const capitalize = require("./utils/capitalize");
 const projectName = "movie-project";
+const browserSync = require("browser-sync");
 
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
+
+browserSync({
+  proxy: "http://localhost:3000", // proxying the app domain
+  files: ['public', 'views', 'views/**/*'], // watching the following folders
+  open: false
+});
 
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
