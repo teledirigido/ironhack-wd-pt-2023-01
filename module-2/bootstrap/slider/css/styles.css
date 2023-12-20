@@ -1,0 +1,18 @@
+.carousel-control-next, 
+.carousel-control-prev {
+  width:auto;
+  opacity:1;
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+  background-color: red;
+  display: block;
+  width:3rem;
+  height:4rem;
+  background-size: 1rem;
+}
+
+.carousel-item img {
+  object-fit: cover;
+}
