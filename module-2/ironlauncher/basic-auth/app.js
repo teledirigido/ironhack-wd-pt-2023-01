@@ -23,9 +23,20 @@ const projectName = "basic-auth";
 
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
+app.use(function(req, res, next) {
+  if (req.session.currentUser) {
+    res.locals.user = req.session.currentUser;
+  }
+  next();
+});
+
+
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
+
+const bookRoutes = require("./routes/book.routes");
+app.use("/books", bookRoutes);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);

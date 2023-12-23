@@ -1,0 +1,13 @@
+<h1>{{ bookFromDB.title }} by {{ bookFromDB.author.username }}</h1>
+<hr>
+<p>
+  {{ bookFromDB.description }}
+</p>
+<hr>
+
+{{#if canEdit }}
+<a href="/books/{{bookFromDB._id}}/edit">
+  Edit
+</a>
+{{/if }}
+  

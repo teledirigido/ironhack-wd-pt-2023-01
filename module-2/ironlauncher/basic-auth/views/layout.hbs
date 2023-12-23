@@ -12,15 +12,24 @@
 
     <nav>
       <ul>
-        <li>
-          <a href="/auth/login">Login</a>
-        </li>
-        <li>
-          <a href="/auth/signup">Register</a>
-        </li>
-        <li>
-          <a href="/auth/logout">Logout</a>
-        </li>
+        {{#unless user }}
+          <li>
+            <a href="/auth/login">Login</a>
+          </li>
+          <li>
+            <a href="/auth/signup">Register</a>
+          </li>
+        {{else}}
+          <li>
+            <a href="/auth/logout">Logout</a>
+          </li>
+          <li>
+            <a href="/books/">All Books</a>
+          </li>
+          <li>
+            <a href="/books/new">New Book</a>
+          </li>
+        {{/unless}}
         <li>
           <a href="/auth/my-profile">My profile</a>
         </li>

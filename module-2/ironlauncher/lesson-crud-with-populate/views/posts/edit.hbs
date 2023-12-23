@@ -1,0 +1,16 @@
+<h2>Edit a post</h2>
+
+<form action="/posts/{{ id }}/edit" method="POST">
+
+  <label> Title:
+    <input type="text" name="title" value="{{ title }}" />
+  </label>
+  <br>
+
+  <label> Content:
+    <textarea type="text" name="content">{{ content }}</textarea>
+  </label>
+  <br>
+
+  <button type="submit">Update post </button>
+</form>
